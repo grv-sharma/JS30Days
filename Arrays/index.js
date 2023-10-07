@@ -49,8 +49,66 @@ const age = inventors.reduce((total, inventor) => {
 }, 0);
 console.log(age);
 
+const invAge = inventors.sort((a, b) => {
+    const firstInventor = a.passed - a.year;
+    const nextInventor = b.passed - b.year;
+    return firstInventor > nextInventor ? -1 : 1;
+});
+console.log(invAge);
+
+const boulevardsInFrance = [
+    "Boulevard Saint-Germain",
+    "Champs-Élysées",
+    "Boulevard Haussmann",
+    "Boulevard de Clichy",
+    "Boulevard Montmartre",
+    "Boulevard des Capucines",
+    "Boulevard de la Madeleine",
+    "Boulevard de Sébastopol",
+    "Boulevard Saint-Michel",
+    "Boulevard du Montparnasse",
+    "Boulevard de l'Hôpital",
+    "Boulevard de l'Indépendance",
+    "Boulevard des Invalides",
+    "Boulevard du Temple",
+    "Boulevard de la Bastille",
+];
+
+const filtered = boulevardsInFrance.filter(boulevard => boulevard.includes(' de '));
+console.log(filtered);
+// To do this in the wikipedia page:
+/*
+const category = document.querySelector('.mw-category');
+const links = Array.from(category.querySelectorAll('a'));
+const de = links.map(link => link.innerHTML);
+const listF = de.filter(elem => elem.includes('de'));
+console.log(listF);
+*/
+
+
 // 7. sort Exercise
 // Sort the people alphabetically by last name
+const sortedByLast = people.sort((lastOne, nextOne) => {
+    const [aLast, aFirst] = lastOne.split(', ');
+    const [bLast, bFirst] = nextOne.split(', ');
+    return aLast > bLast  ? 1 : -1;
+});
+
+console.log(sortedByLast);
+
+
 // 8. Reduce Exercise
 // Sum up the instances of each of these
- 
+const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck', 'pogostick'];
+
+const reducedData = data.reduce((obj, item) => {
+    if (!obj[item]) {
+        obj[item] = 0;
+    }
+    obj[item]++;
+    return obj;
+}, {});
+
+console.log(reducedData);
+
+
