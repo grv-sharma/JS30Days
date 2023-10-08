@@ -1,0 +1,56 @@
+html {
+    background-color: cornflowerblue;
+    color: white;
+}
+.panel-parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100vh;
+    transition: font-size 0.7s cubic-bezier(0, 2.32, 0, 1.76),
+                flex 0.7s cubic-bezier(0, 2.23, 0.58, 1),
+                background 3s ease-in-out;
+}
+
+.panel-child {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: transform 2s;
+}
+
+.panel-child > *:first-child {
+    transition: transform 1.2s;
+    transform: translateY(-1000%);
+}
+
+.panel-child > *:last-child {
+    transition: transform 1.2s;
+    transform: translateY(1000%);
+}
+
+.panel-child.clicked > *:first-child {
+    transition: transform 1.2s;
+    transform: translateY(0);
+}
+.panel-child.clicked > *:last-child {
+    transition: transform 1.2s;
+    transform: translateY(0);
+}
+
+.panel-child:hover {
+    flex: 5;
+    font-size: 40px;
+}
+
+.panel1 {background-image: url(https://wallpapers.com/images/featured/beautiful-ocean-pictures-33b2ht9d8bvriqu6.jpg); background-size: cover; background-position: center;}
+
+.panel2 {background-image: url(https://images.unsplash.com/photo-1590273466070-40c466b4432d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Z3JlZW4lMjBmb3Jlc3R8ZW58MHx8MHx8fDA%3D&w=1000&q=80); background-size: cover; background-position: center;}
+
+.panel3 {background-image: url(https://www.adorama.com/alc/wp-content/uploads/2017/11/shutterstock_114802408-825x465.jpg); background-size: cover; background-position: center;}
+
+.panel4 {background-image: url(https://cdn.britannica.com/57/244757-131-EBAFDFE0/Hindu-Holi-Festival-Mathura-Uttar-Pradesh-India.jpg); background-size: cover; background-position: center;}
+
+.panel5 {background-image: url(https://media.istockphoto.com/id/1301911854/photo/hunter-and-his-dog-with-prey-at-sunset.jpg?s=612x612&w=0&k=20&c=5_zZjvKrnovP4bQIu0fSRyfs9nVUgsdICIRvF9ReHTg=); background-size: cover; background-position: center;}
