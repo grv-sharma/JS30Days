@@ -1,0 +1,21 @@
+html {
+	min-height: 100vh;
+	min-width: 100vh;
+	background-color: purple;
+}
+
+
+#videoContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 12%;
+}
+
+ul {
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+	float: left;
+}

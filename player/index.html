@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS player</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+	<figure id="videoContainer">
+		<video id="video" controls>
+			<source 
+			src="652333414.mp4" 
+			type="video/mp4" />
+		</video>
+		<ul id="video-controls" class="controls">
+			<li><button id="playpause" type="button">Play/Pause</button></li>
+			<li><button id="stop" type="button">Stop</button></li>
+			<li class="progress">
+				<progress id="progress" value=0 min="0">
+					<span id="progress-bar"></span>
+				</progress>
+			</li>
+			<li><button id="mute" type="button">Mute/Unmute</button></li>
+			<li><button id="volinc" type="button">Vol+</button></li>
+			<li><button id="voldec" type="button">Vol-</button></li>
+			<li><button id="fs" type="button">Fullscreen</button></li>
+		</ul>
+	</figure>
+</body>
+</html>
