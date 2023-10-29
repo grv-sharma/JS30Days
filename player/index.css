@@ -4,18 +4,39 @@ html {
 	background-color: purple;
 }
 
+body {
+	background-color: purple;
+}
 
 #videoContainer {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin-top: 12%;
+	margin-top: 7%;
 }
 
+
 ul {
-	display: flex;
-	flex-direction: row;
 	list-style-type: none;
-	float: left;
+	display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    margin-top: 0;
+    width: 600px;
+    opacity: 0.1;
 }
+
+#videoContainer:hover ul{
+	opacity: 1;
+}
+
+#videoContainer ul button {
+	cursor: pointer;
+	border:  0;
+	background: none;
+	color:  white;
+}
+
