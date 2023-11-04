@@ -5,11 +5,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	const playPause = document.getElementById('playPause');
 	const stop = document.getElementById('stop');
-	/*
-	const mute = document.getElementById('mute');
-	const volup = document.getElementById('volup');
-	const voldown = document.getElementById('voldown');
-	*/
 	const progress = document.getElementById('progress');
 	const volRange = document.getElementById('volumeSlider');
 	const speedVar = document.getElementById('speedVar');
@@ -60,9 +55,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		video.currentTime = pos * video.duration;
 	});
 
-	/*volRange.addEventListener("change", (e) => {
-		console.log(`val = ${e.currentTarget.value}`);
-	});*/
 
 	volRange.addEventListener("change", (e) => {
 		video.volume = e.currentTarget.value / 100;
@@ -84,6 +76,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		if (document.fullscreenElement !== null) {
 			document.exitFullscreen();
 		} else {
+			//to display custom controls on fullScreen
 			video_container.requestFullscreen();
 			//video.requestFullscreen();
 		}
