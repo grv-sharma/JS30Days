@@ -1,0 +1,37 @@
+html {
+    background-image: url(https://assets.cairo360.com/app/uploads/2023/02/27/upwk61661577-wikimedia-image-kowapeej.jpg);
+
+}
+
+hr {
+    width: 100%;
+}
+
+.divider {
+    border: 1px solid black;
+    width: 100%;
+}
+#form_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 2px solid black;    
+}
+
+#main_screen {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#items_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    padding: 30px;
+    background-color: white;
+}
