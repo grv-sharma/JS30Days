@@ -1,0 +1,35 @@
+html {
+    display: flex;
+    justify-content: center;
+}
+
+#frame {
+    width: 600px;
+    height: 600px;
+}
+
+.offset-right {
+    right: 35px;
+}
+
+.active {
+    visibility: visible;
+    transform: translateX(30px);
+    transition:all .5s;
+}
+
+.inactive {
+    visibility: hidden;
+}
+
+#first {
+    position: relative;
+    float: left;
+    margin: 15px;
+}
+
+#second {
+    float: right;
+    margin: 15px;
+}
+
