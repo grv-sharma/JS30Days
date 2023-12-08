@@ -15,16 +15,12 @@ document.addEventListener("DOMContentLoaded", function() {
     
     function statusSwitcher() {
         inps = document.querySelectorAll('input');
-        console.log("switcher executed");
         //set data-status
         inps.forEach((el) => {
             el.addEventListener("click", function() {
                 wholeList = JSON.parse(localStorage.getItem("taco-list"));
-                console.log(wholeList);
                 for (let i = 0; i < wholeList.length; i++) {
                     if (el.dataset.index == wholeList[i][3]) {
-                        console.log('if-entered');
-                        console.log(el);
                         wholeList[i][2] = !wholeList[i][2];
                     }
                 }
@@ -59,7 +55,6 @@ document.addEventListener("DOMContentLoaded", function() {
         const formFields = form.elements;
 
         const options = formFields.options;
-        console.log(options.value);
         const currText = document.createTextNode(options.value);
         label.appendChild(currText);
         //list.appendChild(currText);
@@ -72,14 +67,11 @@ document.addEventListener("DOMContentLoaded", function() {
     
         
         // push box-id and item-text into array
-        //saveItems.push([`box${count}`, `${options.value}`]);
         //push with data-status
         saveItems.push([`box${count}`, `${options.value}`, `${list.dataset.status}`, `${list.dataset.index}`]);
         //console.log(saveItems);
         form.reset();
 
-        //localStorage.setItem("taco-list", JSON.stringify(saveItems));
-        //appendToStorage("taco-list", `box${count}`, `${options.value}`);
         persistentStorage("taco-list", saveItems);
         statusSwitcher();
     });
@@ -94,12 +86,10 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         
         savedListItemsParsed = JSON.parse(items);
-        //console.log(savedListItemsParsed);
         if (savedListItemsParsed === null) {
             return;
         } else {
             for (let i = 0; i < savedListItemsParsed.length; i++) {
-                //console.log(savedListItemsParsed[i]);
                 const chk = document.createElement('input');
                 const divider = document.createElement('hr');
                 chk.type = 'checkbox';
@@ -108,7 +98,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 chk.dataset.index = savedListItemsParsed[i][3];
                 // check previously checked items
                 if (chk.dataset.status === 'true') {
-                    console.log('true detected');
                     chk.checked = true;
                 }
 
@@ -120,7 +109,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 unOList.appendChild(lbl);
                 unOList.appendChild(divider);
                 count = savedListItemsParsed[i][0][savedListItemsParsed[0][0].length - 1];
-                console.log(count);
             }
         }   
         statusSwitcher();
